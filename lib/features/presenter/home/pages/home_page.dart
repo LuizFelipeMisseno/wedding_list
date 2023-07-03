@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wedding_list/core/widgets/popular_input.dart';
+
+import '../../../../core/widgets/popular_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,8 +17,19 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('HomePage'),
       ),
-      body: const Center(
-        child: Text('HomePage'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            PopularButton(
+              textoBotaoPopular: 'Botão popular',
+              onPressed: () {},
+            ),
+            const PopularInput(
+              labelText: 'Input',
+            ),
+          ],
+        ),
       ),
     );
   }
