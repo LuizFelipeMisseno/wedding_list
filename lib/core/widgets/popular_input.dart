@@ -8,13 +8,37 @@ class PopularInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(10),
-      width: 350,
-      child: TextFormField(
-        decoration: InputDecoration(
-          labelText: labelText,
-          border: OutlineInputBorder(), // Define o formato da caixa do input
-        ),
+      padding: const EdgeInsets.all(20),
+      constraints: BoxConstraints(maxWidth: 700, minWidth: 350),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Text(
+              labelText,
+              style: const TextStyle(
+                fontFamily: 'Poppins',
+                color: Colors.redAccent,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                  labelText: '',
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Colors.redAccent,
+                  )),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Colors.redAccent,
+                  ))),
+            ),
+          ),
+        ],
       ),
     );
   }
