@@ -16,7 +16,7 @@ class PopularButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.purple[300]),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(textoBotaoPopular,
             style: const TextStyle(
               fontFamily: 'Poppins',
